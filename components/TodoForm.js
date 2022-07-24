@@ -14,7 +14,7 @@ const TodoForm = ({ submitHandler, formValue, setFormValue }) => {
         onChange={changeHandler}
         value={formValue.description}
       />
-      <button className="!bg-blue-600 !text-white w-full" type="submit">
+      <button className="!bg-blue-600 !text-white w-full rounded py-1.5 px-4" type="submit">
         Save
       </button>
     </form>

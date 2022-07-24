@@ -14,7 +14,7 @@ const Header = () => {
           <a>Todos</a>
         </Link>
         {!data && status === "unauthenticated" && (
-          <button onClick={() => signIn("github")}>sign in</button>
+          <button onClick={() => signIn()}>sign in</button>
         )}
         {data && status === "authenticated" && <button onClick={() => signOut()}>sign out</button>}
       </div>
