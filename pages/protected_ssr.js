@@ -15,6 +15,16 @@ export default ProtectedSsr;
 
 export async function getServerSideProps(context) {
   const session = await getSession(context);
+
+  if (!session) {
+    return {
+      redirect: {
+        destination: "/api/auth/signin?callbackUrl=http://localhost:3000/protected_ssr",
+        permanent: false,
+      },
+    };
+  }
+
   return {
     props: {
       session,
